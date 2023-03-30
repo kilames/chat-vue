@@ -1,0 +1,104 @@
+$imgPath: '../../assets/images/coupon_exchange/';
+.coupon-bg{
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+.coupon-exchange-container {
+  font-family: PingFangSC-Regular;
+  background: url($imgPath + 'coupon-exchange-bg.png') center top pr(-80) no-repeat;
+  background-size: 100% auto;
+  padding: 0 pr(32) pr(32);
+  box-sizing: border-box;
+  .header {
+    padding: pr(110) 0 pr(95) pr(35);
+    font-size: pr(60);
+    color: #fff;
+    font-weight: bold;
+    line-height: pr(68);
+  }
+  .panel {
+    margin-bottom: pr(28);
+    background: #fff;
+    border-radius: pr(16);
+    padding: pr(40) pr(32);
+    box-sizing: border-box;
+    .exchange-wrapper {
+      padding: pr(32) 0 pr(40);
+      input {
+        margin-bottom: pr(32);
+        appearance: none;
+        width: 100%;
+        height: pr(120);
+        background: #F8F9FC;
+        border: 1px solid #E5E9EF;
+        border-radius: pr(8);
+        box-sizing: border-box;
+        font-size: pr(48);
+        font-weight: 500;
+        color: #101E36;
+        text-align: center;
+        line-height: normal;
+        &::-webkit-input-placeholder {
+          font-weight: normal;
+          color: #828DA0;
+        }
+        &::-moz-placeholder {
+          font-weight: normal;
+          color: #828DA0;
+        }
+        &:-ms-input-placeholder {
+          font-weight: normal;
+          color: #828DA0;
+        }
+      }
+      .btn-exchange {
+        height: pr(88);
+        background-image: linear-gradient(270deg, #206CFE 0%, #4C88FF 100%);
+        border-radius: pr(8);
+        font-size: pr(32);
+        color: #fff;
+        line-height: pr(88);
+        text-align: center;
+        &.disabled {
+          background: #BFC5D3;
+          color: #fff;
+        }
+      }
+    }
+    .q-a-wrapper {
+      @include borderHalf('top',#F1F3F7);
+      .title {
+        padding: pr(36) 0 pr(32);
+        font-size: pr(32);
+        font-weight: bold;
+        line-height: pr(40);
+      }
+      .usage-list {
+        list-style: decimal;
+        padding-left: pr(30);
+        box-sizing: border-box;
+        .usage-item {
+          font-size: pr(28);
+          color: #464E64;
+          line-height: pr(42);
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .feedback {
+    font-size: pr(24);
+    color: #828DA0;
+    text-align: center;
+    line-height: pr(32);
+    .icon-arrow-feedback {
+      display: inline-block;
+      margin-left: pr(8);
+      width: pr(24);
+      height: pr(24);
+      // background: url($imgPath + 'icon-arrow-right.png') center center no-repeat;
+      background-size: pr(10) pr(20);
+    }
+  }
+}

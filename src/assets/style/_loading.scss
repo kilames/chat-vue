@@ -1,0 +1,57 @@
+.athm-loading {
+  padding: 13px 0;
+  font-size: 12px;
+  color: #7e8da6;
+  line-height: 18px;
+  text-align: center;
+  overflow: hidden;
+}
+
+@-webkit-keyframes athm-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes athm-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+.athm-loading .athm-iconpng-loadingblue {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  line-height: 0;
+  vertical-align: top;
+  -webkit-animation: athm-loading 0.5s linear infinite;
+  animation: athm-loading 0.5s linear infinite;
+}
+
+.athm-iconpng:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  background: url(//s.autoimg.cn/mass/athm19/athm-iconpng-v20200225.png) no-repeat;
+  background-size: 1200px auto;
+}
+
+.athm-iconpng-loadingblue:before {
+  width: 18px;
+  height: 18px;
+  background-position: 0 -110px;
+}

@@ -1,0 +1,197 @@
+@import './core/base.scss';
+@import './core/reset.scss';
+@import './core/setting.scss';
+
+$imgPath: '~@/assets/images/servicedetail/';
+
+.service-detail-container {
+  background: #f8f9fc;
+  font-family: PingFangSC-Regular;
+  color: #111e36;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  // header
+  .header {
+    .banner-box {
+      position: relative;
+      .banner {
+        display: block;
+        width: 100%;
+        height: pr(360);
+      }
+      .service-type {
+        position: absolute;
+        top: pr(52);
+        left: pr(52);
+        .auto-logo {
+          margin-bottom: pr(24);
+          width: pr(48);
+          height: pr(48);
+          background: url($imgPath + 'auto-logo.png') no-repeat;
+          background-size: 100% 100%;
+        }
+        .type-name {
+          margin-bottom: pr(16);
+          font-size: pr(60);
+          font-weight: bold;
+          line-height: pr(70);
+        }
+        .fee {
+          font-size: pr(36);
+          color: #464e64;
+          font-weight: 500;
+          line-height: pr(50);
+        }
+      }
+    }
+
+    .limit {
+      height: pr(136);
+      padding: 0 pr(40) pr(48) pr(40);
+      box-sizing: border-box;
+      background-color: #f5584d;
+      background-image: linear-gradient(90deg, #f5584d 0%, #f9702c 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .limit-time {
+        font-size: pr(36);
+        color: #fff;
+        font-weight: 600;
+      }
+      .limit-address {
+        font-size: pr(28);
+        color: #fff;
+      }
+    }
+  }
+
+  // 主内容
+  .main-container {
+    padding-bottom: pr(242);
+    margin-top: pr(-48);
+    background-color: #f8f9fc;
+    border-radius: pr(32) pr(32) 0 0;
+    overflow: hidden;
+
+    .service-title {
+      height: pr(136);
+      padding: 0 pr(40);
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: pr(44);
+      line-height: pr(60);
+      font-weight: 500;
+
+      .tag {
+        margin-right: pr(14);
+        padding: pr(6) pr(8);
+        border-radius: pr(8) 0 pr(8) 0;
+        background: #ff6600;
+        font-size: pr(24);
+        color: #fff;
+        line-height: pr(28);
+      }
+    }
+
+    .main-wrapper {
+      padding: pr(20) pr(24) 0;
+      box-sizing: border-box;
+
+      .panel {
+        background-color: #fff;
+        padding: 0 pr(32);
+        & + .panel {
+          margin-top: pr(20);
+        }
+        .title {
+          height: pr(96);
+          font-size: pr(32);
+          font-weight: 600;
+          line-height: pr(96);
+        }
+      }
+
+      .service-description {
+        padding: pr(26) 0 pr(32);
+        li {
+          font-size: pr(28);
+          color: #9299aa;
+          line-height: pr(40);
+        }
+      }
+
+      .dealer {
+        padding: pr(38) 0;
+        font-size: pr(24);
+        line-height: pr(28);
+        color: #afb7ca;
+        text-align: center;
+      }
+    }
+  }
+
+  .bottom-box-fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: #fff;
+
+    .bottom-wrapper {
+      padding: pr(32);
+      box-sizing: border-box;
+
+      .btn-order {
+        width: 100%;
+        height: pr(100);
+        background-color: #206cfe;
+        background-image: linear-gradient(270deg, #206cfe 0%, #4c88ff 100%);
+        border-radius: pr(6);
+        font-size: pr(32);
+        color: #fff;
+        text-align: center;
+        line-height: pr(100);
+      }
+      .user-policy {
+        margin-top: pr(22);
+        font-size: pr(22);
+        color: #828ca0;
+        line-height: pr(28);
+        text-align: center;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        input {
+          display: none;
+        }
+        input + span {
+          display: block;
+          margin-right: pr(8);
+          width: pr(24);
+          height: pr(24);
+          background: url($imgPath + 'icon-unselected.png') no-repeat;
+          background-size: 100% 100%;
+        }
+        input:checked + span {
+          background-image: url($imgPath + 'icon-selected.png');
+        }
+
+        .policy-text {
+          flex: 1;
+          text-align: center;
+        }
+        //a {
+        //  color: #206CFE;
+        //}
+      }
+    }
+  }
+}
